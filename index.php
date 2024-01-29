@@ -586,7 +586,7 @@ $page->description = "Cyber Security Business Analysis Project Management ABOUT 
                                                                                         }</style>		<div class="elementor-counter">
                                                                                         <div class="elementor-counter-number-wrapper">
                                                                                             <span class="elementor-counter-number-prefix"></span>
-                                                                                            <span class="elementor-counter-number" data-duration="2000" data-to-value="200" data-from-value="0">0</span>
+                                                                                            <span class="elementor-counter-number" data-duration="2000" data-to-value="200" data-from-value="0">200</span>
                                                                                             <span class="elementor-counter-number-suffix"></span>
                                                                                         </div>
                                                                                         <div class="elementor-counter-title">Happy Clients</div>
@@ -602,7 +602,7 @@ $page->description = "Cyber Security Business Analysis Project Management ABOUT 
                                                                                     <div class="elementor-counter">
                                                                                         <div class="elementor-counter-number-wrapper">
                                                                                             <span class="elementor-counter-number-prefix"></span>
-                                                                                            <span class="elementor-counter-number" data-duration="2000" data-to-value="10" data-from-value="0">0</span>
+                                                                                            <span class="elementor-counter-number" data-duration="2000" data-to-value="10" data-from-value="0">10</span>
                                                                                             <span class="elementor-counter-number-suffix"></span>
                                                                                         </div>
                                                                                         <div class="elementor-counter-title">Companies</div>

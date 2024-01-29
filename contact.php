@@ -1,8 +1,42 @@
 <?php
-    $page = new \stdClass();
-    $page->title = 'Contact Us - CIBEDTECH';
-    $page->breadcrumbs = true;
-    $page->description = "Let's Talk Speak to Us Email: info@cibed.ca Phone: +1 (306) 807 5813 Address: 2010 - 11th Avenue, 7th Floor, Regina, Saskatchewan S4P 0J3. Canada. Get In Touch Fill The Form Below";
+$site = require 'includes/config.php';
+$error = $success = '';
+if (isset($_REQUEST['submit']) && !empty($_POST['email']) && isset($_POST['captcha']) && isset($_POST['captcha_sum'])) {
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+    $message = filter_input(INPUT_POST, 'your-message', FILTER_SANITIZE_STRING);
+    $userAnswer = (int)$_POST['captcha'];
+    $correctSum = (int)$_POST['captcha_sum'];
+
+    // Email configuration
+    $to = $site->email;
+    $subject = 'Contact Form Submission - '. $email;
+    $headers = 'From: ' . $email;
+
+    // Email content
+    $content = "Name: $name\n";
+    $content .= "Phone: $phone\n";
+    $content .= "Email: $email\n";
+    $content .= "Message:\n$message";
+
+    // Send email
+    if ($userAnswer === $correctSum && !empty($email) && !empty($phone) && !empty($message)) {
+        mail($to, $subject, $content, $headers);
+        $success = 'Thank you, your message has been sent. We will get in touch with you soon!';
+        $_POST = [];
+    }
+
+    if ($userAnswer != $correctSum) {
+        $error = 'Please provide correct answer for the Math challenge.';
+    }
+}
+
+$page = new \stdClass();
+$page->title = 'Contact Us - CIBEDTECH';
+$page->breadcrumbs = true;
+$page->description = "Let's Talk Speak to Us Email: info@cibed.ca Phone: +1 (306) 807 5813 Address: 2010 - 11th Avenue, 7th Floor, Regina, Saskatchewan S4P 0J3. Canada. Get In Touch Fill The Form Below";
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#">
@@ -124,7 +158,16 @@
                                                                 <div class="elementor-widget-container">
                                                                     <div class="rs-heading default  ">
                                                                         <div class="title-inner">
-                                                                            <span class="sub-text ">Get In Touch</span><h2 class="title"><span class="watermark"></span>Fill The Form Below</h2>					        </div>
+                                                                            <span class="sub-text ">Get In Touch</span>
+                                                                            <h2 class="title"><span class="watermark"></span>Fill The Form Below</h2>
+                                                                            <?php if (!empty($success)) { ?>
+                                                                                <div class="alert alert-success" role="alert"><?= $success; ?></div>
+                                                                            <?php } ?>
+                                                                                
+                                                                            <?php if (!empty($error)) { ?>
+                                                                                <div class="alert alert-danger" role="alert"><?= $error; ?></div>
+                                                                            <?php } ?>
+                                                                        </div>
                                                                     </div>
 
                                                                 </div>
@@ -139,26 +182,41 @@
                                                                                 <div class="col-sm-6">
                                                                                     <p>
                                                                                         <span class="wpcf7-form-control-wrap" data-name="your-name">
-                                                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="name" />
+                                                                                            <input size="30" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="<?= $_POST['name'] ?? ''; ?>" type="text" name="name" required/>
                                                                                         </span>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="col-sm-6">
-                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-phone"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Phone Number" value="" type="text" name="phone" /></span>
+                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-phone"><input size="30" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Phone Number" value="<?= $_POST['phone'] ?? ''; ?>" type="telephone" name="phone" required /></span>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="col-sm-12">
-                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-Mail" value="" type="email" name="email" /></span>
+                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-Mail" value="<?= $_POST['email'] ?? ''; ?>" type="email" required name="email" /></span>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="col-sm-12">
-                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your Message Here" name="your-message"></textarea></span>
+                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your Message Here" name="your-message" required><?= $_POST['your-message'] ?? ''; ?></textarea></span>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <div class="col-sm-12">
+                                                                                    <p>
+                                                                                        <label for="captcha">Please solve the following math problem:</label>
+                                                                                        <?php
+                                                                                        // Generate random numbers for the captcha
+                                                                                        $num1 = rand(1, 10);
+                                                                                        $num2 = rand(1, 10);
+                                                                                        $sum = $num1 + $num2;
+                                                                                        ?>
+                                                                                        <span><?php echo $num1; ?> + <?php echo $num2; ?> = </span>
+                                                                                        <input class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" type="text" id="captcha" name="captcha" required>
+                                                                                        <input type="hidden" name="captcha_sum" value="<?php echo $sum; ?>">
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="form-button col-sm-12">
                                                                                     <p class="submit-btn"><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Submit Now" />
                                                                                     </p>
                                                                                 </div>
+
                                                                             </div><p style="display: none !important;"><label>&#916;<textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="_wpcf7_ak_js" value="13"/><script>document.getElementById("ak_js_1").setAttribute("value", (new Date()).getTime());</script></p><div class="wpcf7-response-output" aria-hidden="true"></div>
                                                                         </form>
                                                                     </div>
