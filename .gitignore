@@ -1,0 +1,24 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore .DS_Store files in all directories
+**/.DS_Store
+
+# Ignore vendor directories created by Composer
+/vendor/
+
+# Ignore Composer's autoloader
+/vendor/autoload.php
+
+# Ignore Composer's lock file
+/vendor/composer.lock
+
+# Ignore PHPStorm project files
+.idea/
+
+# Ignore local development configuration
+.env
+
+# Ignore logs and caches
+/log/
+/var/
