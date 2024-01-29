@@ -1,29 +1,32 @@
-<?php $pageFilename = explode('.php', $_SERVER['PHP_SELF'])[0]; ?>
+<?php
+
+$pageFilename = explode('.php', $_SERVER['PHP_SELF'])[0];
+$site = require 'config.php';
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="../gmpg.org/xfn/11.html">
-    <title><?php echo $page->title; ?></title>
+    <title><?= $page->title; ?></title>
     <meta name="description" content="<?= $page->description; ?>" />
     <meta name="robots" content="max-image-preview:large" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="CIBEDTECH -" />
+    <meta property="og:site_name" content="<?= $site->name; ?>" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="HOME - CIBEDTECH" />
+    <meta property="og:title" content="<?= $page->title; ?>" />
     <meta property="og:description" content="<?= $page->description; ?>" />
-    <meta property="og:url" content="https://cibed.ca" />
-    <meta property="og:image" content="https://cibed.ca/wp-content/uploads/2023/09/CIBEDTECHlogo-png-2.png" />
+    <meta property="og:url" content="<?= $site->url; ?>" />
+    <meta property="og:image" content="<?= $site->url; ?>/wp-content/uploads/2023/09/CIBEDTECHlogo-png-2.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="HOME - CIBEDTECH" />
+    <meta name="twitter:title" content="<?= $page->title; ?>" />
     <meta name="twitter:description" content="<?= $page->description; ?>" />
 
-    <link rel="icon" type="image/x-icon" href="https://cibed.ca/wp-content/uploads/2023/09/CIBEDTECHlogo-png-2.png">
+    <link rel="icon" type="image/x-icon" href="<?= $site->url; ?>/wp-content/uploads/2023/09/CIBEDTECHlogo-png-2.png">
     <link rel='dns-prefetch' href='//cdn.datatables.net' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <script type="text/javascript">
         /* <![CDATA[ */
-        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext":".png", "svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt":".svg", "source":{"concatemoji":"https:\/\/cibedtech.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.2"}};
+        window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext":".png", "svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt":".svg", "source":{"concatemoji":"https://cibedtech.com/wp-includes/js/wp-emoji-release.min.js?ver=6.4.2"}};
         /*! This file is auto-generated */
         !function(i, n){var o, s, e; function c(e){try{var t = {supportTests:e, timestamp:(new Date).valueOf()}; sessionStorage.setItem(o, JSON.stringify(t))} catch (e){}}function p(e, t, n){e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function(e, t){return e === r[t]})}function u(e, t, n){switch (t){case"flag":return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case"emoji":return!n(e, "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e, t, n){var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope?new OffscreenCanvas(300, 150):i.createElement("canvas"), a = r.getContext("2d", {willReadFrequently:!0}), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function(e){o[e] = t(a, e, n)}), o}function t(e){var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t)}"undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = {everything:!0, everythingExceptFlag:!0}, e = new Promise(function(e){i.addEventListener("DOMContentLoaded", e, {once:!0})}), new Promise(function(t){var n = function(){try{var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests)return e.supportTests} catch (e){}return null}(); if (!n){if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob)try{var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], {type:"text/javascript"}), a = new Worker(URL.createObjectURL(r), {name:"wpTestEmojiSupports"}); return void(a.onmessage = function(e){c(n = e.data), a.terminate(), t(n)})} catch (e){}c(n = f(s, u, p))}t(n)}).then(function(e){for (var t in e)n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function(){n.DOMReady = !0}}).then(function(){return e}).then(function(){var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji?t(e.concatemoji):e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)))}))}((window, document), window._wpemojiSettings);
         /* ]]> */
@@ -100,15 +103,10 @@
     <link rel='stylesheet' id='elementor-global-css' href='wp-content/uploads/elementor/css/globala1c6.css?ver=1693676686' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-post-12886-css' href='wp-content/uploads/elementor/css/post-128862dfd.css?ver=1693686955' type='text/css' media='all' />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Livvic:100,200,300,400,500,600,700,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,900italic&#038;display=swap&#038;ver=1693682375" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Livvic:100,200,300,400,500,600,700,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,900italic&#038;display=swap&#038;ver=1693682375" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Livvic:100,200,300,400,500,600,700,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,900italic&#038;display=swap&#038;ver=1693682375" /></noscript><link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.4.2' type='text/css' media='all' />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script type="text/javascript" src="https://cibedtech.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-    <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
-    <link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed3eb9?url=https%3A%2F%2Fcibedtech.com%2F&amp;format=xml" />
-    <meta name="generator" content="Redux 4.4.5" />    <link rel="shortcut icon" type="image/x-icon" href="wp-content/uploads/2023/06/CIBEDTECH-LOGO.html">
-    <noscript><style>.woocommerce-product-gallery{
-        opacity: 1 !important;
-    }</style></noscript>
-    <meta name="generator" content="Elementor 3.15.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
-    <meta name="generator" content="Powered by Slider Revolution 6.6.11 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+    <script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed3eb9?url=<?= $site->url; ?>p;format=xml" />
     <script>
         function setREVStartSize(e){
         //window.requestAnimationFrame(function() {

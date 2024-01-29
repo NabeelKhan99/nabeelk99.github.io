@@ -55,7 +55,7 @@
                                                                                                     <div class="front-content-part">
                                                                                                         <div class="front-icon-part">
                                                                                                             <span class="front-img">
-                                                                                                                <img decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/1.png" class="attachment-thumbnail size-thumbnail wp-image-212" alt="" srcset="https://cibedtech.com/wp-content/uploads/2020/11/1.png 128w, https://cibedtech.com/wp-content/uploads/2020/11/1-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
+                                                                                                                <img decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/1.png" class="attachment-thumbnail size-thumbnail wp-image-212" alt="" srcset="<?= $site->url; ?>/wp-content/uploads/2020/11/1.png 128w, <?= $site->url; ?>/wp-content/uploads/2020/11/1-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
                                                                                                         </div>
 
                                                                                                         <div class="front-title-part">
@@ -74,7 +74,7 @@
 
                                                                                                         <div class="back-title-part">
                                                                                                             <h3 class="back-title">
-                                                                                                                <a href="https://keenitsolutions.com/products/wordpress/braintech/services/software-development/">Software Development</a>
+                                                                                                                <a href="/contact.php">Software Development</a>
                                                                                                             </h3>
                                                                                                         </div>
 
@@ -83,8 +83,8 @@
                                                                                                         </div>
 
                                                                                                         <div class="back-btn-part">
-                                                                                                            <a class="back-btn " href="https://keenitsolutions.com/products/wordpress/braintech/services/software-development/">
-                                                                                                                <span class="back-btn-txt">View More</span>
+                                                                                                            <a class="back-btn " href="/contact.php">
+                                                                                                                <span class="back-btn-txt">Learn More</span>
                                                                                                             </a>
                                                                                                         </div>
                                                                                                     </div>
@@ -107,7 +107,7 @@
                                                                                                     <div class="front-content-part">
                                                                                                         <div class="front-icon-part">
                                                                                                             <span class="front-img">
-                                                                                                                <img decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/17.png" class="attachment-thumbnail size-thumbnail wp-image-180" alt="" srcset="https://cibedtech.com/wp-content/uploads/2020/11/17.png 128w, https://cibedtech.com/wp-content/uploads/2020/11/17-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
+                                                                                                                <img decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/17.png" class="attachment-thumbnail size-thumbnail wp-image-180" alt="" srcset="<?= $site->url; ?>/wp-content/uploads/2020/11/17.png 128w, <?= $site->url; ?>/wp-content/uploads/2020/11/17-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
                                                                                                         </div>
 
                                                                                                         <div class="front-title-part">
@@ -126,7 +126,7 @@
 
                                                                                                         <div class="back-title-part">
                                                                                                             <h3 class="back-title">
-                                                                                                                <a href="https://keenitsolutions.com/products/wordpress/braintech/services/cloud-and-devops/">Cloud and DevOps</a>
+                                                                                                                <a href="/contact.php">Cloud and DevOps</a>
                                                                                                             </h3>
                                                                                                         </div>
 
@@ -135,8 +135,8 @@
                                                                                                         </div>
 
                                                                                                         <div class="back-btn-part">
-                                                                                                            <a class="back-btn " href="https://keenitsolutions.com/products/wordpress/braintech/services/cloud-and-devops/">
-                                                                                                                <span class="back-btn-txt">View More</span>
+                                                                                                            <a class="back-btn " href="/contact.php">
+                                                                                                                <span class="back-btn-txt">Learn More</span>
                                                                                                             </a>
                                                                                                         </div>
                                                                                                     </div>
@@ -163,7 +163,7 @@
                                                                                                     <div class="front-content-part">
                                                                                                         <div class="front-icon-part">
                                                                                                             <span class="front-img">
-                                                                                                                <img decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/2.png" class="attachment-thumbnail size-thumbnail wp-image-213" alt="" srcset="https://cibedtech.com/wp-content/uploads/2020/11/2.png 128w, https://cibedtech.com/wp-content/uploads/2020/11/2-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
+                                                                                                                <img decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/2.png" class="attachment-thumbnail size-thumbnail wp-image-213" alt="" srcset="<?= $site->url; ?>/wp-content/uploads/2020/11/2.png 128w, <?= $site->url; ?>/wp-content/uploads/2020/11/2-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
                                                                                                         </div>
 
                                                                                                         <div class="front-title-part">
@@ -182,7 +182,7 @@
 
                                                                                                         <div class="back-title-part">
                                                                                                             <h3 class="back-title">
-                                                                                                                <a href="https://keenitsolutions.com/products/wordpress/braintech/services/web-development/">Web Development</a>
+                                                                                                                <a href="/contact.php">Web Development</a>
                                                                                                             </h3>
                                                                                                         </div>
 
@@ -191,8 +191,8 @@
                                                                                                         </div>
 
                                                                                                         <div class="back-btn-part">
-                                                                                                            <a class="back-btn " href="https://keenitsolutions.com/products/wordpress/braintech/services/web-development/">
-                                                                                                                <span class="back-btn-txt">View More</span>
+                                                                                                            <a class="back-btn " href="/contact.php">
+                                                                                                                <span class="back-btn-txt">Learn More</span>
                                                                                                             </a>
                                                                                                         </div>
                                                                                                     </div>
@@ -215,7 +215,7 @@
                                                                                                     <div class="front-content-part">
                                                                                                         <div class="front-icon-part">
                                                                                                             <span class="front-img">
-                                                                                                                <img loading="lazy" decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/11.png" class="attachment-thumbnail size-thumbnail wp-image-215" alt="" srcset="https://cibedtech.com/wp-content/uploads/2020/11/11.png 128w, https://cibedtech.com/wp-content/uploads/2020/11/11-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
+                                                                                                                <img loading="lazy" decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/11.png" class="attachment-thumbnail size-thumbnail wp-image-215" alt="" srcset="<?= $site->url; ?>/wp-content/uploads/2020/11/11.png 128w, <?= $site->url; ?>/wp-content/uploads/2020/11/11-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
                                                                                                         </div>
 
                                                                                                         <div class="front-title-part">
@@ -234,7 +234,7 @@
 
                                                                                                         <div class="back-title-part">
                                                                                                             <h3 class="back-title">
-                                                                                                                <a href="https://keenitsolutions.com/products/wordpress/braintech/services/product-design/">Product Design</a>
+                                                                                                                <a href="/contact.php">Product Design</a>
                                                                                                             </h3>
                                                                                                         </div>
 
@@ -243,8 +243,8 @@
                                                                                                         </div>
 
                                                                                                         <div class="back-btn-part">
-                                                                                                            <a class="back-btn " href="https://keenitsolutions.com/products/wordpress/braintech/services/product-design/">
-                                                                                                                <span class="back-btn-txt">View More</span>
+                                                                                                            <a class="back-btn " href="/contact.php">
+                                                                                                                <span class="back-btn-txt">Learn More</span>
                                                                                                             </a>
                                                                                                         </div>
                                                                                                     </div>
@@ -271,7 +271,7 @@
                                                                                                     <div class="front-content-part">
                                                                                                         <div class="front-icon-part">
                                                                                                             <span class="front-img">
-                                                                                                                <img loading="lazy" decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/13.png" class="attachment-thumbnail size-thumbnail wp-image-217" alt="" srcset="https://cibedtech.com/wp-content/uploads/2020/11/13.png 128w, https://cibedtech.com/wp-content/uploads/2020/11/13-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
+                                                                                                                <img loading="lazy" decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/13.png" class="attachment-thumbnail size-thumbnail wp-image-217" alt="" srcset="<?= $site->url; ?>/wp-content/uploads/2020/11/13.png 128w, <?= $site->url; ?>/wp-content/uploads/2020/11/13-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
                                                                                                         </div>
 
                                                                                                         <div class="front-title-part">
@@ -290,7 +290,7 @@
 
                                                                                                         <div class="back-title-part">
                                                                                                             <h3 class="back-title">
-                                                                                                                <a href="https://keenitsolutions.com/products/wordpress/braintech/services/analytic-solutions/">Analytic Solutions</a>
+                                                                                                                <a href="/contact.php">Analytic Solutions</a>
                                                                                                             </h3>
                                                                                                         </div>
 
@@ -299,8 +299,8 @@
                                                                                                         </div>
 
                                                                                                         <div class="back-btn-part">
-                                                                                                            <a class="back-btn " href="https://keenitsolutions.com/products/wordpress/braintech/services/analytic-solutions/">
-                                                                                                                <span class="back-btn-txt">View More</span>
+                                                                                                            <a class="back-btn " href="/contact.php">
+                                                                                                                <span class="back-btn-txt">Learn More</span>
                                                                                                             </a>
                                                                                                         </div>
                                                                                                     </div>
@@ -323,7 +323,7 @@
                                                                                                     <div class="front-content-part">
                                                                                                         <div class="front-icon-part">
                                                                                                             <span class="front-img">
-                                                                                                                <img loading="lazy" decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/15.png" class="attachment-thumbnail size-thumbnail wp-image-214" alt="" srcset="https://cibedtech.com/wp-content/uploads/2020/11/15.png 128w, https://cibedtech.com/wp-content/uploads/2020/11/15-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
+                                                                                                                <img loading="lazy" decoding="async" width="128" height="128" src="../wp-content/uploads/2020/11/15.png" class="attachment-thumbnail size-thumbnail wp-image-214" alt="" srcset="<?= $site->url; ?>/wp-content/uploads/2020/11/15.png 128w, <?= $site->url; ?>/wp-content/uploads/2020/11/15-100x100.png 100w" sizes="(max-width: 128px) 100vw, 128px" />                                    </span>
                                                                                                         </div>
 
                                                                                                         <div class="front-title-part">
@@ -342,7 +342,7 @@
 
                                                                                                         <div class="back-title-part">
                                                                                                             <h3 class="back-title">
-                                                                                                                <a href="https://keenitsolutions.com/products/wordpress/braintech/services/database-administration/">Database Administration</a>
+                                                                                                                <a href="/contact.php">Database Administration</a>
                                                                                                             </h3>
                                                                                                         </div>
 
@@ -351,8 +351,8 @@
                                                                                                         </div>
 
                                                                                                         <div class="back-btn-part">
-                                                                                                            <a class="back-btn " href="https://keenitsolutions.com/products/wordpress/braintech/services/database-administration/">
-                                                                                                                <span class="back-btn-txt">View More</span>
+                                                                                                            <a class="back-btn " href="/contact.php">
+                                                                                                                <span class="back-btn-txt">Learn More</span>
                                                                                                             </a>
                                                                                                         </div>
                                                                                                     </div>
@@ -393,7 +393,7 @@
 
 
                                                                                     <div class="rs-btn">
-                                                                                        <a class="readon rs_button" href="#" >
+                                                                                        <a class="readon rs_button" href="/contact.php" >
                                                                                             <span class="btn_text">Contact Us</span>
                                                                                         </a>
                                                                                     </div>
@@ -421,7 +421,7 @@
                                                                                                 </div>
 
 
-                                                                                                <p class="number-txt">  Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas. Dummy text generator</p>
+                                                                                                <p class="number-txt">  </p>
 
 
                                                                                             </div>
@@ -446,7 +446,7 @@
                                                                                                 </div>
 
 
-                                                                                                <p class="number-txt">  Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas. Dummy text generator</p>
+                                                                                                <p class="number-txt">  </p>
 
 
                                                                                             </div>
@@ -475,7 +475,7 @@
                                                                                                 </div>
 
 
-                                                                                                <p class="number-txt">  Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas. Dummy text generator</p>
+                                                                                                <p class="number-txt">  </p>
 
 
                                                                                             </div>
@@ -500,7 +500,7 @@
                                                                                                 </div>
 
 
-                                                                                                <p class="number-txt">  Quisque placerat vitae lacus ut scelerisque. Fusce luctus odio ac nibh luctus, in porttitor theo lacus egestas. Dummy text generator</p>
+                                                                                                <p class="number-txt">  </p>
 
 
                                                                                             </div>
@@ -580,7 +580,7 @@
 
                                                                                     <div class="wpcf7 no-js" id="wpcf7-f11582-p11559-o1" lang="en-US" dir="ltr">
                                                                                         <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-                                                                                        <form action="https://cibedtech.com/services/#wpcf7-f11582-p11559-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+                                                                                        <form action="<?= $site->url; ?>/services/#wpcf7-f11582-p11559-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
                                                                                             <div style="display: none;">
                                                                                                 <input type="hidden" name="_wpcf7" value="11582" />
                                                                                                 <input type="hidden" name="_wpcf7_version" value="5.8" />
@@ -654,7 +654,7 @@
 
 
                                                                                     <div class="rs-btn">
-                                                                                        <a class="readon rs_button" href="#" >
+                                                                                        <a class="readon rs_button" href="/contact.php" >
                                                                                             <span class="btn_text">Get In Touch</span>
                                                                                         </a>
                                                                                     </div>

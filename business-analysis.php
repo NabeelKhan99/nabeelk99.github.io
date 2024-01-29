@@ -54,7 +54,7 @@
                                                                         .elementor-widget-image img{
                                                                             vertical-align:middle;
                                                                             display:inline-block
-                                                                        }</style>												<img fetchpriority="high" decoding="async" width="800" height="670" src="../../wp-content/uploads/2020/11/mid-2.jpg" class="attachment-full size-full wp-image-12414" alt="" srcset="https://cibedtech.com/wp-content/uploads/2020/11/mid-2.jpg 800w, https://cibedtech.com/wp-content/uploads/2020/11/mid-2-300x251.jpg 300w, https://cibedtech.com/wp-content/uploads/2020/11/mid-2-768x643.jpg 768w, https://cibedtech.com/wp-content/uploads/2020/11/mid-2-80x68.jpg 80w, https://cibedtech.com/wp-content/uploads/2020/11/mid-2-600x503.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+                                                                        }</style>												<img fetchpriority="high" decoding="async" width="800" height="670" src="../../wp-content/uploads/2020/11/mid-2.jpg" class="attachment-full size-full wp-image-12414" alt="" srcset="<?= $site->url; ?>/wp-content/uploads/2020/11/mid-2.jpg 800w, <?= $site->url; ?>/wp-content/uploads/2020/11/mid-2-300x251.jpg 300w, <?= $site->url; ?>/wp-content/uploads/2020/11/mid-2-768x643.jpg 768w, <?= $site->url; ?>/wp-content/uploads/2020/11/mid-2-80x68.jpg 80w, <?= $site->url; ?>/wp-content/uploads/2020/11/mid-2-600x503.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-681b04ec elementor-widget elementor-widget-heading" data-id="681b04ec" data-element_type="widget" data-widget_type="heading.default">
                                                                 <div class="elementor-widget-container">
@@ -112,7 +112,7 @@
                                                                         }
                                                                         .elementor-widget-text-editor .elementor-drop-cap-letter{
                                                                             display:inline-block
-                                                                        }</style>				<p>CIBEDTECH Business Analysis Is the practice of enabling change in an enterprise by defining needs and recommending solutions that deliver value to stakeholders. Business analysts are agents of change who work across all levels of an organization and may be involved in defining strategy creating enterprise architecture, leading projects and programs, oh supporting continuous improvement. Business analysis is also a disciplined approach for introducing and<br />managing change to an organization, whether they are for profit businesses government or nonprofits.<br /><br />Delivery method virtual program expert led section.<br />For who – Anyone who is interested to pivot into Business Analysis Career.<br /><br /><strong>Talk to our experts</strong><br /><strong>+1 3068075813</strong></p>						</div>
+                                                                        }</style>				<p>CIBEDTECH Business Analysis Is the practice of enabling change in an enterprise by defining needs and recommending solutions that deliver value to stakeholders. Business analysts are agents of change who work across all levels of an organization and may be involved in defining strategy creating enterprise architecture, leading projects and programs, oh supporting continuous improvement. Business analysis is also a disciplined approach for introducing and<br />managing change to an organization, whether they are for profit businesses government or nonprofits.<br /><br />Delivery method virtual program expert led section.<br />For who – Anyone who is interested to pivot into Business Analysis Career.<br /><br /><strong>Talk to our experts</strong><br /><strong><?= $site->phone; ?></strong></p>						</div>
                                                             </div>
                                                             <div class="elementor-element elementor-element-c358441 elementor-widget elementor-widget-button" data-id="c358441" data-element_type="widget" data-widget_type="button.default">
                                                                 <div class="elementor-widget-container">
@@ -136,11 +136,13 @@
                                                                                     <div class="address-icon"><i class="fa fa-phone"></i>
                                                                                     </div>
                                                                                     <h3 class="sidebar_question"> Call Us Today! </h3>
-                                                                                    <h3 class="sidebar_number">
-                                                                                        +1 3068075813</h3>
+                                                                                    <h3 class="sidebar_number"><?= $site->phone; ?></h3>
 
                                                                                 </div>
-                                                                            </div></div></div>		</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

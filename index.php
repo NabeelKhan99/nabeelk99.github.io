@@ -51,8 +51,8 @@ $page->description = "Cyber Security Business Analysis Project Management ABOUT 
                                                                         <rs-module-wrap id="rev_slider_2_1_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
                                                                             <rs-module id="rev_slider_2_1" style="" data-version="6.6.11">
                                                                                 <rs-slides style="overflow: hidden; position: absolute;">
-                                                                                    <rs-slide style="position: absolute;" data-key="rs-2" data-title="Slide" data-thumb="//cibedtech.com/wp-content/uploads/2023/05/slider-1-11-50x100.jpg" data-anim="d:10;ms:500;f:slidebased;" data-in="o:0;x:(-50%);sx:0.7;sy:0.7;m:true;e:power4.inOut;col:6;" data-out="a:false;" data-alttrans="turnoff-vertical">
-                                                                                        <img fetchpriority="high" decoding="async" src="wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="slider-1-11" width="1920" height="860" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//cibedtech.com/wp-content/uploads/2023/05/slider-1-11.jpg" data-bg="p:left top;" data-no-retina>
+                                                                                    <rs-slide style="position: absolute;" data-key="rs-2" data-title="Slide" data-thumb="//<?= $site->domain; ?>/images/slider-1-11-50x100.jpg" data-anim="d:10;ms:500;f:slidebased;" data-in="o:0;x:(-50%);sx:0.7;sy:0.7;m:true;e:power4.inOut;col:6;" data-out="a:false;" data-alttrans="turnoff-vertical">
+                                                                                        <img fetchpriority="high" decoding="async" src="/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="slider-1-11" width="1920" height="860" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//<?= $site->domain; ?>/images/slider-1-11.jpg" data-bg="p:left top;" data-no-retina>
                                                                                         <!--
                                                                                         --><rs-layer
                                                                                             id="slider-2-slide-2-layer-0" 
@@ -100,8 +100,8 @@ $page->description = "Cyber Security Business Analysis Project Management ABOUT 
                                                                                             >Acquire the skills that top employers require. 
                                                                                         </rs-layer><!--
                                                                                         -->						</rs-slide>
-                                                                                    <rs-slide style="position: absolute;" data-key="rs-3" data-title="Slide" data-thumb="//cibedtech.com/wp-content/uploads/2023/05/slider-1-11-1-50x100.jpg" data-anim="d:10;ms:500;f:slidebased;" data-in="o:0;x:(-50%);sx:0.7;sy:0.7;m:true;e:power4.inOut;col:6;" data-out="a:false;" data-alttrans="turnoff-vertical">
-                                                                                        <img decoding="async" src="wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="slider-1-11" width="1920" height="860" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//cibedtech.com/wp-content/uploads/2023/05/slider-1-11-1.jpg" data-bg="p:left top;" data-no-retina>
+                                                                                    <rs-slide style="position: absolute;" data-key="rs-3" data-title="Slide" data-thumb="//<?= $site->domain; ?>/images/slider-1-11-1-50x100.jpg" data-anim="d:10;ms:500;f:slidebased;" data-in="o:0;x:(-50%);sx:0.7;sy:0.7;m:true;e:power4.inOut;col:6;" data-out="a:false;" data-alttrans="turnoff-vertical">
+                                                                                        <img decoding="async" src="/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="slider-1-11" width="1920" height="860" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//<?= $site->domain; ?>/images/slider-1-11-1.jpg" data-bg="p:left top;" data-no-retina>
                                                                                         <!--
                                                                                         --><rs-layer
                                                                                             id="slider-2-slide-3-layer-0" 
@@ -463,7 +463,7 @@ $page->description = "Cyber Security Business Analysis Project Management ABOUT 
                                                                                         .elementor-widget-image img{
                                                                                             vertical-align:middle;
                                                                                             display:inline-block
-                                                                                        }</style>												<img decoding="async" width="657" height="723" src="wp-content/uploads/2023/05/contact-here-1.png" class="attachment-full size-full wp-image-22434" alt="" srcset="https://cibedtech.com/wp-content/uploads/2023/05/contact-here-1.png 657w, https://cibedtech.com/wp-content/uploads/2023/05/contact-here-1-273x300.png 273w, https://cibedtech.com/wp-content/uploads/2023/05/contact-here-1-600x660.png 600w" sizes="(max-width: 657px) 100vw, 657px" />															</div>
+                                                                                        }</style>												<img decoding="async" width="657" height="723" src="wp-content/uploads/2023/05/contact-here-1.png" class="attachment-full size-full wp-image-22434" alt="" srcset="<?= $site->url; ?>/wp-content/uploads/2023/05/contact-here-1.png 657w, <?= $site->url; ?>/wp-content/uploads/2023/05/contact-here-1-273x300.png 273w, <?= $site->url; ?>/wp-content/uploads/2023/05/contact-here-1-600x660.png 600w" sizes="(max-width: 657px) 100vw, 657px" />															</div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -499,7 +499,8 @@ $page->description = "Cyber Security Business Analysis Project Management ABOUT 
                                                                                 <div class="elementor-widget-container">
                                                                                     <div class="rs-heading default center ">
                                                                                         <div class="title-inner">        		      		
-                                                                                            <h2 class="title"><span class="watermark"></span>CALL US 24/7</h2>					        </div>
+                                                                                            <h2 class="title"><span class="watermark"></span>CALL US 24/7</h2>
+                                                                                        </div>
                                                                                     </div>
 
                                                                                 </div>
@@ -508,7 +509,8 @@ $page->description = "Cyber Security Business Analysis Project Management ABOUT 
                                                                                 <div class="elementor-widget-container">
                                                                                     <div class="rs-heading default center ">
                                                                                         <div class="title-inner">        		      		
-                                                                                            <h3 class="title"><span class="watermark"></span>+1 (306) 807 5813</h3>					        </div>
+                                                                                            <h3 class="title"><span class="watermark"></span><?= $site->phone; ?></h3>
+                                                                                        </div>
                                                                                     </div>
 
                                                                                 </div>
@@ -519,7 +521,7 @@ $page->description = "Cyber Security Business Analysis Project Management ABOUT 
                                                                                         <div class="title-inner">        		      		
                                                                                         </div>
                                                                                         <div class="description">
-                                                                                            <p>info@cibedtech.com</p>            		
+                                                                                            <p><?= $site->email; ?></p>
                                                                                         </div>
                                                                                     </div>
 

@@ -2,7 +2,7 @@
     $page = new \stdClass();
     $page->title = 'Contact Us - CIBEDTECH';
     $page->breadcrumbs = true;
-    $page->description = "Let's Talk Speak to Us Email: info@cibedtech.com Phone: +1 (306) 807 5813 Address: 2010 - 11th Avenue, 7th Floor, Regina, Saskatchewan S4P 0J3. Canada. Get In Touch Fill The Form Below";
+    $page->description = "Let's Talk Speak to Us Email: info@cibed.ca Phone: +1 (306) 807 5813 Address: 2010 - 11th Avenue, 7th Floor, Regina, Saskatchewan S4P 0J3. Canada. Get In Touch Fill The Form Below";
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#">
@@ -65,7 +65,8 @@
                                                                                 <div class="text">
                                                                                     <span class="label">Email:</span>
                                                                                     <span class="des">
-                                                                                        info@cibedtech.com				            </span>
+                                                                                       <?= $site->email; ?>
+                                                                                    </span>
                                                                                 </div>
 
 
@@ -83,7 +84,8 @@
                                                                                 <div class="text">
                                                                                     <span class="label">Phone:</span>
                                                                                     <span class="des">
-                                                                                        +1 (306) 807 5813				            </span>
+                                                                                        <?= $site->phone; ?>
+                                                                                    </span>
                                                                                 </div>
 
 
@@ -101,11 +103,9 @@
                                                                                 <div class="text">
                                                                                     <span class="label">Address:</span>
                                                                                     <span class="des">
-                                                                                        2010 - 11th Avenue, 7th Floor, Regina, Saskatchewan S4P 0J3. Canada.				            </span>
+                                                                                        <?= $site->address; ?>
+                                                                                    </span>
                                                                                 </div>
-
-
-
 
                                                                             </div>
                                                                         </div>
@@ -134,31 +134,21 @@
 
                                                                     <div class="wpcf7 no-js" id="wpcf7-f11860-p12-o1" lang="en-US" dir="ltr">
                                                                         <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-                                                                        <form action="https://cibedtech.com/contact/#wpcf7-f11860-p12-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
-                                                                            <div style="display: none;">
-                                                                                <input type="hidden" name="_wpcf7" value="11860" />
-                                                                                <input type="hidden" name="_wpcf7_version" value="5.8" />
-                                                                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f11860-p12-o1" />
-                                                                                <input type="hidden" name="_wpcf7_container_post" value="12" />
-                                                                                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                                                                <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
-                                                                            </div>
+                                                                        <form action="?submit" method="post" class="wpcf7-form init" aria-label="Contact form">
                                                                             <div class="row">
                                                                                 <div class="col-sm-6">
-                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="your-name" /></span>
+                                                                                    <p>
+                                                                                        <span class="wpcf7-form-control-wrap" data-name="your-name">
+                                                                                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text" name="name" />
+                                                                                        </span>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="col-sm-6">
-                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-Mail" value="" type="email" name="your-email" /></span>
+                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-phone"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Phone Number" value="" type="text" name="phone" /></span>
                                                                                     </p>
                                                                                 </div>
-                                                                                <div class="col-sm-6">
-                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-phone"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Phone Number" value="" type="text" name="your-phone" /></span>
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div class="col-sm-6">
-                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-website"><input size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your Website" value="" type="text" name="your-website" /></span>
+                                                                                <div class="col-sm-12">
+                                                                                    <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-Mail" value="" type="email" name="email" /></span>
                                                                                     </p>
                                                                                 </div>
                                                                                 <div class="col-sm-12">
