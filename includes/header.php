@@ -11,11 +11,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="HOME - CIBEDTECH" />
     <meta property="og:description" content="<?= $page->description; ?>" />
-    <meta property="og:url" content="/" />
+    <meta property="og:url" content="https://cibed.ca" />
+    <meta property="og:image" content="https://cibed.ca/wp-content/uploads/2023/09/CIBEDTECHlogo-png-2.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="HOME - CIBEDTECH" />
     <meta name="twitter:description" content="<?= $page->description; ?>" />
 
+    <link rel="icon" type="image/x-icon" href="https://cibed.ca/wp-content/uploads/2023/09/CIBEDTECHlogo-png-2.png">
     <link rel='dns-prefetch' href='//cdn.datatables.net' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
