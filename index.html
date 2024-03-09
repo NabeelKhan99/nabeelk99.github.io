@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profit Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Profit Calculator</h1>
+        <form id="profitForm">
+            <div id="fieldsContainer">
+                <div class="orderFields">
+                    <label for="orderDistance">Order Distance (km):</label>
+                    <input type="number" name="orderDistance[]" step="0.01" required>
+
+                    <label for="totalCashEarned">Total Cash Earned ($):</label>
+                    <input type="number" name="totalCashEarned[]" step="0.01" required>
+                </div>
+            </div>
+
+            <button type="button" onclick="addFields()">Add Fields</button>
+            <button type="button" onclick="calculateProfit()">Calculate Profit</button>
+        </form>
+        
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <p id="fuelConsumed"></p>
+            <p id="totalFuelCost"></p>
+            <p id="profit"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
