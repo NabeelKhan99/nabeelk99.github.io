@@ -28,8 +28,8 @@ function calculateProfit() {
     let totalCashEarned = 0;
 
     for (let i = 0; i < orderDistances.length; i++) {
-        const orderDistance = parseFloat(orderDistances[i].value);
-        const totalCashEarnedValue = parseFloat(totalCashEarneds[i].value);
+        const orderDistance = parseFloat(orderDistances[i].value) || 0; // Use 0 if value is not a valid number
+        const totalCashEarnedValue = parseFloat(totalCashEarneds[i].value) || 0;
 
         // Calculate the fuel consumed for the given distance
         const fuelConsumed = (orderDistance / 100) * fuelConsumptionRate;
@@ -53,3 +53,4 @@ function calculateProfit() {
     // Show the results section
     document.getElementById("results").classList.remove("hidden");
 }
+
