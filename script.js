@@ -1,18 +1,11 @@
 function addFields() {
     const fieldsContainer = document.getElementById("fieldsContainer");
-    const orderFields = document.createElement("div");
-    orderFields.classList.add("orderFields");
+    const initialFields = document.querySelector('.orderFields'); // Assuming the initial set has the 'orderFields' class
 
-    orderFields.innerHTML = `
-        <label for="orderDistance">Order Distance (km):</label>
-        <input type="number" name="orderDistance[]" step="0.01" required>
-
-        <label for="totalCashEarned">Total Cash Earned ($):</label>
-        <input type="number" name="totalCashEarned[]" step="0.01" required>
-    `;
-
+    const orderFields = initialFields.cloneNode(true);
     fieldsContainer.appendChild(orderFields);
 }
+
 
 function calculateProfit() {
     const orderDistances = document.getElementsByName("orderDistance[]");
@@ -63,17 +56,16 @@ function resetForm() {
         totalCashEarneds[i].value = '';
     }
 
-    // Remove dynamically added fields
+    // Replace the container's content with the initial set of fields
     const fieldsContainer = document.getElementById("fieldsContainer");
-
-    // Remove all child elements except the first one (initial set of fields)
-    while (fieldsContainer.children.length > 1) {
-        fieldsContainer.removeChild(fieldsContainer.lastChild);
-    }
+    fieldsContainer.innerHTML = '';  // Remove all child elements
+    const initialFields = document.querySelector('.orderFields');
+    fieldsContainer.appendChild(initialFields.cloneNode(true));
 
     // Hide results section
     document.getElementById("results").classList.add("hidden");
 }
+
 
 
 
