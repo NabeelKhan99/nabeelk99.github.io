@@ -56,15 +56,18 @@ function resetForm() {
         totalCashEarneds[i].value = '';
     }
 
-    // Replace the container's content with the initial set of fields
+    // Remove dynamically added fields (keeping a minimum of two fields)
     const fieldsContainer = document.getElementById("fieldsContainer");
-    fieldsContainer.innerHTML = '';  // Remove all child elements
-    const initialFields = document.querySelector('.orderFields');
-    fieldsContainer.appendChild(initialFields.cloneNode(true));
+
+    // Remove all child elements beyond the first two (initial set of fields)
+    while (fieldsContainer.children.length > 2) {
+        fieldsContainer.removeChild(fieldsContainer.lastChild);
+    }
 
     // Hide results section
     document.getElementById("results").classList.add("hidden");
 }
+
 
 
 
