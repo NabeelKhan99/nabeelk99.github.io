@@ -65,8 +65,10 @@ function resetForm() {
 
     // Remove dynamically added fields
     const fieldsContainer = document.getElementById("fieldsContainer");
-    while (fieldsContainer.firstChild) {
-        fieldsContainer.removeChild(fieldsContainer.firstChild);
+
+    // Remove all child elements except the first one (initial set of fields)
+    while (fieldsContainer.children.length > 1) {
+        fieldsContainer.removeChild(fieldsContainer.lastChild);
     }
 
     // Hide results section
