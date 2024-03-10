@@ -18,17 +18,16 @@ function calculateProfit() {
     const orderDistances = document.getElementsByName("orderDistance[]");
     const totalCashEarneds = document.getElementsByName("totalCashEarned[]");
 
-    // Assume a fuel consumption rate of 6.6 liters per 100 kilometers
-    const fuelConsumptionRate = 6.6;
+    const fuelConsumptionRate = 7.8; // Change fuel consumption rate to 7.8 liters per 100 kilometers
 
-    // Assume fuel cost of 134 cents per liter
-    const fuelCostPerLiter = 1.34;
+    // Change fuel cost to 1.27 cents per liter
+    const fuelCostPerLiter = 1.27;
 
     let totalFuelConsumed = 0;
     let totalCashEarned = 0;
 
     for (let i = 0; i < orderDistances.length; i++) {
-        const orderDistance = parseFloat(orderDistances[i].value) || 0; // Use 0 if value is not a valid number
+        const orderDistance = parseFloat(orderDistances[i].value) || 0;
         const totalCashEarnedValue = parseFloat(totalCashEarneds[i].value) || 0;
 
         // Calculate the fuel consumed for the given distance
@@ -53,4 +52,19 @@ function calculateProfit() {
     // Show the results section
     document.getElementById("results").classList.remove("hidden");
 }
+
+function resetForm() {
+    // Clear form fields
+    const orderDistances = document.getElementsByName("orderDistance[]");
+    const totalCashEarneds = document.getElementsByName("totalCashEarned[]");
+
+    for (let i = 0; i < orderDistances.length; i++) {
+        orderDistances[i].value = '';
+        totalCashEarneds[i].value = '';
+    }
+
+    // Hide results section
+    document.getElementById("results").classList.add("hidden");
+}
+
 
