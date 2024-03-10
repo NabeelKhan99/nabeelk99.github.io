@@ -63,8 +63,15 @@ function resetForm() {
         totalCashEarneds[i].value = '';
     }
 
+    // Remove dynamically added fields
+    const fieldsContainer = document.getElementById("fieldsContainer");
+    while (fieldsContainer.firstChild) {
+        fieldsContainer.removeChild(fieldsContainer.firstChild);
+    }
+
     // Hide results section
     document.getElementById("results").classList.add("hidden");
 }
+
 
 
